@@ -1,0 +1,8 @@
+build/
+__pycache__/
+*.o
+*.pcap
+*.pcapng
+*.part
+received*
+.vscode/

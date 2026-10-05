@@ -1,0 +1,176 @@
+{
+  "byte_order": {
+    "source": "00-prerequisites/byte-order.c",
+    "helpers": []
+  },
+  "socket_info": {
+    "source": "01-socket-fundamentals/examples/socket-info.c",
+    "helpers": []
+  },
+  "tcp_server": {
+    "source": "02-tcp-server/server.c",
+    "helpers": []
+  },
+  "tcp_client": {
+    "source": "03-tcp-client/client.c",
+    "helpers": []
+  },
+  "frame_server": {
+    "source": "04-tcp-client-server/server.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "frame_client": {
+    "source": "04-tcp-client-server/client.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "udp_server": {
+    "source": "05-udp-programming/udp-server.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "udp_client": {
+    "source": "05-udp-programming/udp-client.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "udp_broadcast": {
+    "source": "05-udp-programming/broadcast.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "iterative_server": {
+    "source": "06-multiple-client-server/iterative-server/server.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "fork_server": {
+    "source": "06-multiple-client-server/fork-server/server.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "thread_server": {
+    "source": "06-multiple-client-server/thread-server/server.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "fork_demo": {
+    "source": "07-concurrent-programming/processes/fork-demo.c",
+    "helpers": []
+  },
+  "thread_demo": {
+    "source": "07-concurrent-programming/threads/thread-demo.c",
+    "helpers": []
+  },
+  "counter": {
+    "source": "07-concurrent-programming/synchronization/counter.c",
+    "helpers": []
+  },
+  "select_server": {
+    "source": "08-io-multiplexing/select/server.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "poll_server": {
+    "source": "08-io-multiplexing/poll/server.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "epoll_server": {
+    "source": "08-io-multiplexing/epoll/server.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "connect_timeout": {
+    "source": "09-advanced-sockets/blocking-vs-nonblocking/connect.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "socket_options": {
+    "source": "09-advanced-sockets/socket-options/options.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "receive_timeout": {
+    "source": "09-advanced-sockets/timeouts/timeout.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "broken_pipe": {
+    "source": "09-advanced-sockets/error-handling/broken-pipe.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "ipv6_server": {
+    "source": "09-advanced-sockets/ipv6/server.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "ipv6_client": {
+    "source": "09-advanced-sockets/ipv6/client.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "tcp_chat_server": {
+    "source": "11-real-world-projects/tcp-chat/server.c",
+    "helpers": [
+      "net",
+      "chat"
+    ]
+  },
+  "tcp_chat_client": {
+    "source": "11-real-world-projects/tcp-chat/client.c",
+    "helpers": [
+      "net",
+      "chat"
+    ]
+  },
+  "udp_chat": {
+    "source": "11-real-world-projects/udp-chat/peer.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "multi_chat": {
+    "source": "11-real-world-projects/multi-client-chat/server.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "file_sender": {
+    "source": "11-real-world-projects/file-transfer/sender.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "file_receiver": {
+    "source": "11-real-world-projects/file-transfer/receiver.c",
+    "helpers": [
+      "net"
+    ]
+  },
+  "http_server": {
+    "source": "11-real-world-projects/simple-http-server/server.c",
+    "helpers": [
+      "net"
+    ]
+  }
+}
