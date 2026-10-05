@@ -1,0 +1,4 @@
+make: Entering directory '/workspace/scratch/ae65571af1f7/socket-programming-zero-to-advanced'
+python3 tools/check_docs.py
+Documentation checks passed: 126 Markdown files; 14 chapter templates.
+make: Leaving directory '/workspace/scratch/ae65571af1f7/socket-programming-zero-to-advanced'

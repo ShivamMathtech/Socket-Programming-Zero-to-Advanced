@@ -1,0 +1,27 @@
+test_01_local_demos (__main__.CourseTests.test_01_local_demos) ... ok
+test_02_standalone_echo (__main__.CourseTests.test_02_standalone_echo) ... ok
+test_03_raw_echo_variants (__main__.CourseTests.test_03_raw_echo_variants) ... ok
+test_04_concurrent_echo_and_idle_peer (__main__.CourseTests.test_04_concurrent_echo_and_idle_peer) ... ok
+test_05_event_loop_slow_reader (__main__.CourseTests.test_05_event_loop_slow_reader) ... ok
+test_06_fragmented_coalesced_and_empty_frames (__main__.CourseTests.test_06_fragmented_coalesced_and_empty_frames) ... ok
+test_07_frame_client_and_rejected_length (__main__.CourseTests.test_07_frame_client_and_rejected_length) ... ok
+test_08_udp_echo_and_empty_datagram (__main__.CourseTests.test_08_udp_echo_and_empty_datagram) ... ok
+test_09_broadcast_option_local_delivery (__main__.CourseTests.test_09_broadcast_option_local_delivery) ... ok
+test_10_nonblocking_connect (__main__.CourseTests.test_10_nonblocking_connect) ... ok
+test_11_ipv6 (__main__.CourseTests.test_11_ipv6) ... ok
+test_12_tcp_chat_server_duplex (__main__.CourseTests.test_12_tcp_chat_server_duplex) ... ok
+test_13_tcp_chat_client (__main__.CourseTests.test_13_tcp_chat_client) ... ok
+test_14_udp_chat_peer (__main__.CourseTests.test_14_udp_chat_peer) ... ok
+test_15_multi_chat_split_lines (__main__.CourseTests.test_15_multi_chat_split_lines) ... ok
+test_16_multi_chat_oversize_line (__main__.CourseTests.test_16_multi_chat_oversize_line) ... ok
+test_17_file_transfer_binary_and_empty (__main__.CourseTests.test_17_file_transfer_binary_and_empty) ... ok
+test_18_file_transfer_refuses_overwrite (__main__.CourseTests.test_18_file_transfer_refuses_overwrite) ... ok
+test_19_file_transfer_truncation_cleanup (__main__.CourseTests.test_19_file_transfer_truncation_cleanup) ... ok
+test_20_http_routes_head_and_errors (__main__.CourseTests.test_20_http_routes_head_and_errors) ... ok
+test_21_http_fragmented_headers (__main__.CourseTests.test_21_http_fragmented_headers) ... ok
+test_22_invalid_cli_arguments (__main__.CourseTests.test_22_invalid_cli_arguments) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 1.527s
+
+OK

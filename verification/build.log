@@ -1,0 +1,34 @@
+make: Entering directory '/workspace/scratch/ae65571af1f7/socket-programming-zero-to-advanced'
+mkdir -p build
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 00-prerequisites/byte-order.c -o build/byte_order  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 01-socket-fundamentals/examples/socket-info.c -o build/socket_info  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 02-tcp-server/server.c -o build/tcp_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 03-tcp-client/client.c -o build/tcp_client  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 04-tcp-client-server/server.c common/net.c -o build/frame_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 04-tcp-client-server/client.c common/net.c -o build/frame_client  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 05-udp-programming/udp-server.c common/net.c -o build/udp_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 05-udp-programming/udp-client.c common/net.c -o build/udp_client  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 05-udp-programming/broadcast.c common/net.c -o build/udp_broadcast  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 06-multiple-client-server/iterative-server/server.c common/net.c -o build/iterative_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 06-multiple-client-server/fork-server/server.c common/net.c -o build/fork_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 06-multiple-client-server/thread-server/server.c common/net.c -o build/thread_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 07-concurrent-programming/processes/fork-demo.c -o build/fork_demo  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 07-concurrent-programming/threads/thread-demo.c -o build/thread_demo  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 07-concurrent-programming/synchronization/counter.c -o build/counter  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 08-io-multiplexing/select/server.c common/net.c -o build/select_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 08-io-multiplexing/poll/server.c common/net.c -o build/poll_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 08-io-multiplexing/epoll/server.c common/net.c -o build/epoll_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 09-advanced-sockets/blocking-vs-nonblocking/connect.c common/net.c -o build/connect_timeout  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 09-advanced-sockets/socket-options/options.c common/net.c -o build/socket_options  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 09-advanced-sockets/timeouts/timeout.c common/net.c -o build/receive_timeout  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 09-advanced-sockets/error-handling/broken-pipe.c common/net.c -o build/broken_pipe  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 09-advanced-sockets/ipv6/server.c common/net.c -o build/ipv6_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 09-advanced-sockets/ipv6/client.c common/net.c -o build/ipv6_client  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 11-real-world-projects/tcp-chat/server.c common/net.c common/chat.c -o build/tcp_chat_server  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 11-real-world-projects/tcp-chat/client.c common/net.c common/chat.c -o build/tcp_chat_client  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 11-real-world-projects/udp-chat/peer.c common/net.c -o build/udp_chat  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 11-real-world-projects/multi-client-chat/server.c common/net.c -o build/multi_chat  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 11-real-world-projects/file-transfer/sender.c common/net.c -o build/file_sender  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 11-real-world-projects/file-transfer/receiver.c common/net.c -o build/file_receiver  -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror 11-real-world-projects/simple-http-server/server.c common/net.c -o build/http_server  -pthread
+make: Leaving directory '/workspace/scratch/ae65571af1f7/socket-programming-zero-to-advanced'

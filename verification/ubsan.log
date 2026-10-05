@@ -1,0 +1,67 @@
+make clean
+make[1]: Entering directory '/workspace/scratch/ae65571af1f7/socket-programming-zero-to-advanced'
+rm -rf build
+make[1]: Leaving directory '/workspace/scratch/ae65571af1f7/socket-programming-zero-to-advanced'
+make CFLAGS="-std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer" LDFLAGS="-fsanitize=undefined" test
+make[1]: Entering directory '/workspace/scratch/ae65571af1f7/socket-programming-zero-to-advanced'
+mkdir -p build
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 00-prerequisites/byte-order.c -o build/byte_order -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 01-socket-fundamentals/examples/socket-info.c -o build/socket_info -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 02-tcp-server/server.c -o build/tcp_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 03-tcp-client/client.c -o build/tcp_client -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 04-tcp-client-server/server.c common/net.c -o build/frame_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 04-tcp-client-server/client.c common/net.c -o build/frame_client -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 05-udp-programming/udp-server.c common/net.c -o build/udp_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 05-udp-programming/udp-client.c common/net.c -o build/udp_client -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 05-udp-programming/broadcast.c common/net.c -o build/udp_broadcast -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 06-multiple-client-server/iterative-server/server.c common/net.c -o build/iterative_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 06-multiple-client-server/fork-server/server.c common/net.c -o build/fork_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 06-multiple-client-server/thread-server/server.c common/net.c -o build/thread_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 07-concurrent-programming/processes/fork-demo.c -o build/fork_demo -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 07-concurrent-programming/threads/thread-demo.c -o build/thread_demo -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 07-concurrent-programming/synchronization/counter.c -o build/counter -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 08-io-multiplexing/select/server.c common/net.c -o build/select_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 08-io-multiplexing/poll/server.c common/net.c -o build/poll_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 08-io-multiplexing/epoll/server.c common/net.c -o build/epoll_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 09-advanced-sockets/blocking-vs-nonblocking/connect.c common/net.c -o build/connect_timeout -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 09-advanced-sockets/socket-options/options.c common/net.c -o build/socket_options -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 09-advanced-sockets/timeouts/timeout.c common/net.c -o build/receive_timeout -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 09-advanced-sockets/error-handling/broken-pipe.c common/net.c -o build/broken_pipe -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 09-advanced-sockets/ipv6/server.c common/net.c -o build/ipv6_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 09-advanced-sockets/ipv6/client.c common/net.c -o build/ipv6_client -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 11-real-world-projects/tcp-chat/server.c common/net.c common/chat.c -o build/tcp_chat_server -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 11-real-world-projects/tcp-chat/client.c common/net.c common/chat.c -o build/tcp_chat_client -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 11-real-world-projects/udp-chat/peer.c common/net.c -o build/udp_chat -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 11-real-world-projects/multi-client-chat/server.c common/net.c -o build/multi_chat -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 11-real-world-projects/file-transfer/sender.c common/net.c -o build/file_sender -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 11-real-world-projects/file-transfer/receiver.c common/net.c -o build/file_receiver -fsanitize=undefined -pthread
+cc -D_POSIX_C_SOURCE=200809L -Icommon -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=undefined -fno-omit-frame-pointer 11-real-world-projects/simple-http-server/server.c common/net.c -o build/http_server -fsanitize=undefined -pthread
+python3 tests/test_course.py
+test_01_local_demos (__main__.CourseTests.test_01_local_demos) ... ok
+test_02_standalone_echo (__main__.CourseTests.test_02_standalone_echo) ... ok
+test_03_raw_echo_variants (__main__.CourseTests.test_03_raw_echo_variants) ... ok
+test_04_concurrent_echo_and_idle_peer (__main__.CourseTests.test_04_concurrent_echo_and_idle_peer) ... ok
+test_05_event_loop_slow_reader (__main__.CourseTests.test_05_event_loop_slow_reader) ... ok
+test_06_fragmented_coalesced_and_empty_frames (__main__.CourseTests.test_06_fragmented_coalesced_and_empty_frames) ... ok
+test_07_frame_client_and_rejected_length (__main__.CourseTests.test_07_frame_client_and_rejected_length) ... ok
+test_08_udp_echo_and_empty_datagram (__main__.CourseTests.test_08_udp_echo_and_empty_datagram) ... ok
+test_09_broadcast_option_local_delivery (__main__.CourseTests.test_09_broadcast_option_local_delivery) ... ok
+test_10_nonblocking_connect (__main__.CourseTests.test_10_nonblocking_connect) ... ok
+test_11_ipv6 (__main__.CourseTests.test_11_ipv6) ... ok
+test_12_tcp_chat_server_duplex (__main__.CourseTests.test_12_tcp_chat_server_duplex) ... ok
+test_13_tcp_chat_client (__main__.CourseTests.test_13_tcp_chat_client) ... ok
+test_14_udp_chat_peer (__main__.CourseTests.test_14_udp_chat_peer) ... ok
+test_15_multi_chat_split_lines (__main__.CourseTests.test_15_multi_chat_split_lines) ... ok
+test_16_multi_chat_oversize_line (__main__.CourseTests.test_16_multi_chat_oversize_line) ... ok
+test_17_file_transfer_binary_and_empty (__main__.CourseTests.test_17_file_transfer_binary_and_empty) ... ok
+test_18_file_transfer_refuses_overwrite (__main__.CourseTests.test_18_file_transfer_refuses_overwrite) ... ok
+test_19_file_transfer_truncation_cleanup (__main__.CourseTests.test_19_file_transfer_truncation_cleanup) ... ok
+test_20_http_routes_head_and_errors (__main__.CourseTests.test_20_http_routes_head_and_errors) ... ok
+test_21_http_fragmented_headers (__main__.CourseTests.test_21_http_fragmented_headers) ... ok
+test_22_invalid_cli_arguments (__main__.CourseTests.test_22_invalid_cli_arguments) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 2.056s
+
+OK
+make[1]: Leaving directory '/workspace/scratch/ae65571af1f7/socket-programming-zero-to-advanced'
