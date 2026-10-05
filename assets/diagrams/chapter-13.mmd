@@ -1,0 +1,7 @@
+flowchart TD
+    Requirements["Clarify requirements"] --> Protocol["Choose framing and ownership"]
+    Protocol --> Normal["Normal exchange"]
+    Protocol --> Overload["Overload and failure"]
+    Normal --> Limits["Define bounded resources"]
+    Overload --> Limits
+    Limits --> Evidence["Propose meaningful validation"]

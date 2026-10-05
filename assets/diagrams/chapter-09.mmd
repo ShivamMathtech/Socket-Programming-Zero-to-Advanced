@@ -1,0 +1,9 @@
+flowchart TD
+    Connect["Nonblocking connect"] --> State["Return value"]
+    State -->|"immediate success"| Done["Connected"]
+    State -->|"EINPROGRESS"| Poll["Wait to deadline"]
+    State -->|"other error"| Fail["Close and report"]
+    Poll -->|"ready"| Error["Read SO_ERROR"]
+    Poll -->|"expired"| Fail
+    Error -->|"zero"| Done
+    Error -->|"nonzero"| Fail

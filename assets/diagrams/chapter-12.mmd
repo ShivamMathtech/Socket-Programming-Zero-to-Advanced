@@ -1,0 +1,8 @@
+flowchart TD
+    Question["Read question"] --> Predict["State a prediction"]
+    Predict --> Rule["Identify API guarantee"]
+    Rule --> Run["Run a minimal case"]
+    Run --> Match["Compare with prediction"]
+    Match -->|"agrees"| Explain["Explain why"]
+    Match -->|"differs"| Revise["Find first false assumption"]
+    Revise --> Rule

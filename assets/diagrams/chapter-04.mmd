@@ -1,0 +1,7 @@
+flowchart TD
+    H["Read 4-byte header"] --> Bound["Validate length"]
+    Bound -->|"within capacity"| Body["Read exact body"]
+    Bound -->|"too large"| Reject["Close peer"]
+    Body -->|"complete"| Echo["Send framed response"]
+    Body -->|"early EOF"| Reject
+    Echo --> H

@@ -1,0 +1,7 @@
+flowchart TD
+    App["Application bytes"] --> Transport["Transport choice"]
+    Transport --> TCP["TCP byte stream"]
+    Transport --> UDP["UDP datagram"]
+    TCP --> IP["IP packet and route"]
+    UDP --> IP
+    IP --> Link["Local link frame"]

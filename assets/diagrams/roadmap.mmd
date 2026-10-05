@@ -1,0 +1,12 @@
+flowchart TD
+    Basics["Networking and C"] --> Socket["Socket fundamentals"]
+    Socket --> TCP["TCP streams"]
+    Socket --> UDP["UDP datagrams"]
+    TCP --> Framing["Message framing"]
+    Framing --> Concurrent["Processes and threads"]
+    Framing --> Events["select, poll and epoll"]
+    Concurrent --> Advanced["Timeouts and IPv6"]
+    Events --> Advanced
+    UDP --> Projects["Seven projects"]
+    Advanced --> Projects
+    Projects --> Review["Debug, explain and defend"]

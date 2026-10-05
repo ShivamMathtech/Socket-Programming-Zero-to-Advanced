@@ -1,0 +1,7 @@
+flowchart TD
+    Spec["Specify wire format"] --> State["Define parser state"]
+    State --> Happy["Valid exchange"]
+    State --> Failure["Failure boundaries"]
+    Happy --> Test["Executable checks"]
+    Failure --> Test
+    Test --> Document["Document actual guarantees"]

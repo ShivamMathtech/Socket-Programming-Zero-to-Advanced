@@ -1,0 +1,9 @@
+flowchart TD
+    Accept["Accept peer"] --> Limit["Worker capacity"]
+    Limit -->|"full"| Reject["Close new peer"]
+    Limit -->|"available"| Worker["Create worker"]
+    Worker --> Owner["Transfer descriptor ownership"]
+    Owner --> Echo["Read and echo"]
+    Echo --> Close["Close and release slot"]
+    Accept --> Next["Accept next peer"]
+    Next --> Limit

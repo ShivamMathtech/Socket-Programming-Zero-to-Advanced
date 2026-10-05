@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant CA as Client app
+    participant CK as Client kernel
+    participant SK as Server kernel
+    participant SA as Server app
+    SA->>SK: bind and listen
+    CA->>CK: connect
+    CK->>SK: SYN
+    SK->>CK: SYN and ACK
+    CK->>SK: ACK
+    SA->>SK: accept
+    SK-->>SA: Connected descriptor
+    CA->>CK: send bytes
+    CK->>SK: Stream bytes
+    SA->>SK: recv
+    SK-->>SA: Available bytes

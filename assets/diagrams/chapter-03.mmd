@@ -1,0 +1,11 @@
+stateDiagram-v2
+    [*] --> Connected
+    Connected --> Sending: request bytes
+    Sending --> ReadOnly: shutdown write
+    ReadOnly --> ReadOnly: reply bytes
+    ReadOnly --> Finished: incoming EOF
+    Connected --> Failed: I/O error
+    Sending --> Failed: I/O error
+    ReadOnly --> Failed: I/O error
+    Failed --> [*]
+    Finished --> [*]

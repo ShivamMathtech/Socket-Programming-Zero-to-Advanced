@@ -1,0 +1,9 @@
+flowchart TD
+    Create["socket"] --> Choice["Endpoint role"]
+    Choice --> Bind["bind and listen"]
+    Choice --> Connect["connect"]
+    Bind --> Accept["accept new descriptor"]
+    Accept --> IO["Connected I/O"]
+    Connect --> IO
+    IO --> Close["close owned descriptor"]
+    Bind --> Stop["close listener"]

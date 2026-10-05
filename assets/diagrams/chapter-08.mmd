@@ -1,0 +1,11 @@
+flowchart TD
+    Wait["Wait for readiness"] --> Read["Readable peer"]
+    Wait --> Write["Writable peer"]
+    Read --> Capacity["Queue has capacity"]
+    Capacity -->|"yes"| Receive["Read bounded bytes"]
+    Capacity -->|"no"| Pause["Pause read interest"]
+    Receive --> Queue["Update peer queue"]
+    Write --> Queue
+    Queue --> Interest["Update read/write interest"]
+    Pause --> Interest
+    Interest --> Wait

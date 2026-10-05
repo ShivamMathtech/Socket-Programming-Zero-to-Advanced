@@ -1,0 +1,11 @@
+flowchart TD
+    Failure["Reproduce failure"] --> Stage["First failed stage"]
+    Stage --> Local["Allocation or bind"]
+    Stage --> Establish["Connection establishment"]
+    Stage --> Protocol["Connected exchange"]
+    Local --> Tables["Inspect descriptors and listeners"]
+    Establish --> Route["Inspect endpoint and packets"]
+    Protocol --> Framing["Inspect framing and queues"]
+    Tables --> Rerun["Correct one cause and rerun"]
+    Route --> Rerun
+    Framing --> Rerun

@@ -1,0 +1,8 @@
+flowchart TD
+    Worker["Worker update"] --> Lock["Acquire mutex"]
+    Lock --> Read["Read counter"]
+    Read --> Write["Increment and store"]
+    Write --> Unlock["Release mutex"]
+    Unlock --> Worker
+    Worker -->|"finished"| Join["Main joins workers"]
+    Join --> Total["Read final total"]

@@ -1,0 +1,7 @@
+flowchart TD
+    Sender["Sender datagram"] --> Network["Network delivery"]
+    Network -->|"delivered"| Receiver["Bound UDP endpoint"]
+    Network -->|"lost"| Timeout["No matching reply"]
+    Receiver --> Size["Receive capacity"]
+    Size -->|"fits"| Message["Complete datagram"]
+    Size -->|"too small"| Truncate["Excess bytes discarded"]
