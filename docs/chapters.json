@@ -1,0 +1,72 @@
+[
+  [
+    "00-prerequisites",
+    "Networking and C prerequisites",
+    "🟢"
+  ],
+  [
+    "01-socket-fundamentals",
+    "Socket fundamentals",
+    "🟢"
+  ],
+  [
+    "02-tcp-server",
+    "Your first TCP server",
+    "🟢"
+  ],
+  [
+    "03-tcp-client",
+    "Your first TCP client",
+    "🟢"
+  ],
+  [
+    "04-tcp-client-server",
+    "Framing and interactive TCP",
+    "🟢"
+  ],
+  [
+    "05-udp-programming",
+    "UDP and broadcast",
+    "🟢"
+  ],
+  [
+    "06-multiple-client-server",
+    "Serving multiple clients",
+    "🟡"
+  ],
+  [
+    "07-concurrent-programming",
+    "Processes, threads and synchronization",
+    "🟡"
+  ],
+  [
+    "08-io-multiplexing",
+    "select, poll and epoll",
+    "🔴"
+  ],
+  [
+    "09-advanced-sockets",
+    "Nonblocking I/O, timeouts and IPv6",
+    "🔴"
+  ],
+  [
+    "10-network-debugging",
+    "Network debugging laboratory",
+    "🟡"
+  ],
+  [
+    "11-real-world-projects",
+    "Seven practical projects",
+    "🔴"
+  ],
+  [
+    "12-exam-preparation",
+    "Exam preparation and worked answers",
+    "🟡"
+  ],
+  [
+    "13-interview-preparation",
+    "Interview preparation and design reasoning",
+    "🔴"
+  ]
+]
